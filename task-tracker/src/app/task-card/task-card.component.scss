@@ -1,0 +1,29 @@
+.example-card {
+    margin-top: 30px;
+    border-radius: 5px;
+    padding: 5px;
+    box-shadow: 0 6px 9px rgba(0, 0, 0, 0.1);
+    transition: box-shadow 0.1s ease-in-out;
+}
+  
+.example-card:hover {
+    box-shadow: 0 9px 12px rgba(0, 0, 0, 0.2);
+}
+
+.assignment {
+    color: rgb(6, 77, 3);
+    font-weight: bold;
+}
+
+.buttons{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex;
+    margin-right: 6px;
+}
+
+.example-card mat-form-field {
+    width: 100%;
+    margin-bottom: 15px;
+}

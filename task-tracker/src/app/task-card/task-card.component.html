@@ -1,0 +1,30 @@
+<mat-card class="example-card">
+  <mat-card-header>
+    <mat-card-title>{{ task.name }}</mat-card-title>
+  </mat-card-header>
+  <mat-card-content>
+    <br>
+    <p>{{ task.description }}</p>
+
+    <p class="assignment"> Assigned to: {{ task.assignedTo }}</p>
+    
+    <mat-form-field>
+      <mat-label>Status</mat-label>
+        <mat-select [(value)]="task.status" (selectionChange)="onStatusChange(task)">
+          <mat-option *ngFor="let status of statusOptions" [value]="status">
+            {{ status }}
+          </mat-option>
+        </mat-select>
+    </mat-form-field>
+
+    <div class="buttons">
+      <button mat-icon-button color="warn" (click)="onDeleteTask.emit(task)">
+        <mat-icon>delete</mat-icon>
+      </button>
+      <button mat-icon-button color="primary" (click)="editTask(task)">
+        <mat-icon>edit</mat-icon>
+      </button>
+    </div>
+ </mat-card-content>
+ 
+</mat-card>

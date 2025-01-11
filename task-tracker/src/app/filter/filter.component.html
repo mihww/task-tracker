@@ -1,0 +1,6 @@
+<mat-tab-group (selectedTabChange)="selectStatus(statuses[$event.index])">
+    @for(status of statuses; track $index)
+    {
+        <mat-tab label="{{status}}"></mat-tab>
+    }
+</mat-tab-group>
